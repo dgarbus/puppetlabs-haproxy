@@ -1,0 +1,2 @@
+  {{range service "<% if @consul_tag %><%= @consul_tag %>.<% end %><%= @consul_service %><% if @consul_datacenter %>@<%= @consul_datacenter %><% end %>"}}server {{.Node}} {{.Address}}:{{.Port}} <%= Array(@options).sort.join(" ") %>
+  {{end}}
