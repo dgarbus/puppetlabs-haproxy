@@ -54,6 +54,7 @@ define haproxy::balancermember::consul_service (
   $consul_service    = $name,
   $consul_datacenter = undef,
   $consul_tag        = undef,
+  $service_port      = undef,
   $ensure            = 'present',
   $options           = '',
   $define_cookies    = false
